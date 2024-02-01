@@ -1,0 +1,11 @@
+services:
+
+  boinc:
+    image: boinc-client
+    user: 1000:1000
+    ports:
+      - 127.0.0.1:31416:31416
+    volumes:
+      - type: bind
+        source: /srv/boinc/client/
+        target: /var/lib/boinc-client/
