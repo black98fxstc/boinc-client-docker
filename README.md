@@ -6,7 +6,9 @@ You can run as any user, doesn't need any special priveleges but must own /srv/b
 You can use any IP address and port you want, but this does not expose it to the Internet, which you probably want.
 You can find the rpc passwrd in /srv/boinc/client/gui_rpc_auth.cfg.
 You can adjust the number of cpus. Frankly I don't understand how boinc or docker does it's usage calculations so I just give it half for now.
-Put this (suitably modified) into your compose.yaml file
+This version automatically applies security updates.
+
+Put this (suitably modified) into your compose.yaml file and make a copy of boinc/Dockerfile
 
     services:
 
@@ -29,6 +31,11 @@ Put this (suitably modified) into your compose.yaml file
 or just
 
     cd boinc-client-docker
+
+Create the work dir if necessary
+
+    sudo mkdirs /srv/boinc/client
+    sudo chown 1000:1000 /srv/boinc/client
 
 Start it up
 
