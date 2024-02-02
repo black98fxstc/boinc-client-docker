@@ -1,7 +1,9 @@
 services:
 
   boinc:
+    pull_policy: build
     image: boinc-client
+    build: ./boinc
     user: 1000:1000
     ports:
       - 127.0.0.1:31416:31416
@@ -9,3 +11,8 @@ services:
       - type: bind
         source: /srv/boinc/client/
         target: /var/lib/boinc-client/
+    deploy:
+      resources:
+        limits:
+          cpus: '6.0'
+          
