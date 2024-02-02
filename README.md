@@ -3,7 +3,7 @@
 Run the BOINC client in a Docker container
 
 You can run as any user, doesn't need any special priveleges but must own /srv/boinc/client or wherever you put the files.
-You can find the prc passwrd in /srv/boinc/client/gui_rpc_auth.cfg.
+You can find the rpc passwrd in /srv/boinc/client/gui_rpc_auth.cfg.
 You can adjust the number of cpus. Frankly I don't understand how boinc or docker does it's usage calculations so I just give it half for now.
 
     services:
