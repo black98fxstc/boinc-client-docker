@@ -11,8 +11,8 @@ services:
       - type: bind
         source: /srv/boinc/client/
         target: /var/lib/boinc-client/
+    restart: unless-stopped
     deploy:
       resources:
         limits:
           cpus: '6.0'
-          
