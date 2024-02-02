@@ -39,7 +39,7 @@ Create the work dir if necessary
 
 Start it up
 
-    docker compose up -d boinc
+    docker compose up --detach boinc
 
 Then connect with
 
@@ -53,4 +53,4 @@ You can also use docker directly if you insist. You can figure out the resource 
 
      docker run --user 1000:1000 --publish 127.0.0.1:31416:31416 \
        --mount type=bind,source=/srv/boinc/client,target=/var/lib/boinc-client \
-       --restart unless-stopped black98fxstc/boinc-client
+       --detach --restart unless-stopped black98fxstc/boinc-client
