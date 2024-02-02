@@ -1,8 +1,7 @@
 services:
 
   boinc:
-    pull_policy: build
-    image: boinc-client
+    image: black98fxstc/boinc-client
     build: ./boinc
     user: 1000:1000
     ports:
