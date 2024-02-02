@@ -20,6 +20,6 @@ You can adjust the number of cpus. Frankly I don't understand how boinc or docke
                 target: /var/lib/boinc-client/
             restart: unless-stopped
             deploy:
-            resources:
-                limits:
-                cpus: '6.0'
+                resources:
+                    limits:
+                        cpus: '6.0'
