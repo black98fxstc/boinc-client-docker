@@ -13,9 +13,7 @@ Put this (suitably modified) into your compose.yaml file and make a copy of boin
     services:
 
         boinc:
-            pull_policy: build
-            image: boinc-client
-            build: ./boinc
+            image: black98fxstc/boinc-client:latest
             user: 1000:1000
             ports:
             - 127.0.0.1:31416:31416
