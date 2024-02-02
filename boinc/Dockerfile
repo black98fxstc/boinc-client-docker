@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ENV BOINC_VERSION=client_release/7.24/7.24.3
 
-EXPOSE 21416
+EXPOSE 31416
 
 VOLUME /var/lib/boinc-client
 
