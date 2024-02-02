@@ -2,7 +2,9 @@ services:
 
   boinc:
     image: black98fxstc/boinc-client
-    build: ./boinc
+    build:
+      context: .
+      dockerfile: boinc.Dockerfile
     user: 1000:1000
     ports:
       - 127.0.0.1:31416:31416
