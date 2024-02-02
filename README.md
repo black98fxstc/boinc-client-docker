@@ -1,6 +1,6 @@
-# boinc-client-docker
+# BOINC Client in Docker Container
 
-Run the BOINC client in a Docker container
+[Run the BOINC client in a Docker container](https://github.com/black98fxstc/boinc-client-docker.git)
 
 You can use any user and directory you want.
 The user doesn't need any special priveleges but the directory must exist and be owned by the user.
