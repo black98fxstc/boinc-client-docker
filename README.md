@@ -2,13 +2,14 @@
 
 Run the BOINC client in a Docker container
 
-You can run as any user, doesn't need any special priveleges but must own /srv/boinc/client or wherever you put the files.
+You can use any user and directory you want.
+The user doesn't need any special priveleges but the directory must exist and be owned by the user.
 You can use any IP address and port you want, but this does not expose it to the Internet, which you probably want.
 You can find the rpc passwrd in /srv/boinc/client/gui_rpc_auth.cfg.
 You can adjust the number of cpus. Frankly I don't understand how boinc or docker does it's usage calculations so I just give it half for now.
-This version automatically applies security updates.
+This version automatically applies security updates to the OS but does not update boinc itself.
 
-Put this (suitably modified) into your compose.yaml file and make a copy of boinc/Dockerfile
+Put this (suitably modified) into your compose.yaml file
 
     services:
 
