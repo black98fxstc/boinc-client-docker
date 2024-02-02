@@ -48,3 +48,7 @@ Then connect with
 It will automatically restart on reboot unless you stop it with
 
     docker compose down boinc
+
+You can also use docker directly if you insist. You can figure out the resource restrictions yourself.
+
+     docker run --user 1000:1000 --publish 127.0.0.1:31416:31416 --mount type=bind,source=/srv/boinc/client,target=/var/lib/boinc-client --restart unless-stopped black98fxstc/boinc-client
